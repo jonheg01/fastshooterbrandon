@@ -113,6 +113,35 @@ video {
   );
 }
 
+/* Brandon, cut out, standing on the red cut */
+.hero__cutout {
+  position: absolute;
+  z-index: 2;
+  right: 8%;
+  bottom: 50px;
+  height: min(78%, 660px);
+  width: auto;
+  object-fit: contain;
+  object-position: bottom right;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 860px) {
+  .hero__cutout {
+    right: -2%;
+    bottom: 74px;
+    height: min(56%, 430px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__cutout {
+    right: -6%;
+    height: min(48%, 330px);
+  }
+}
+
 /* diagonal red cut */
 .hero__cut {
   position: absolute;

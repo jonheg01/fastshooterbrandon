@@ -24,6 +24,16 @@ export const heroVideo: { src: string | null; poster: string | null } = {
 };
 
 /**
+ * Cut-out of Brandon that stands on the right of the hero, feet landing on the
+ * diagonal red cut. Background removed, edges matted against the site's own
+ * near-black so there is no halo.
+ */
+export const heroCutout: { src: string | null; alt: string } = {
+  src: "/brandon-hero.webp",
+  alt: "Brandon Hegreness shooting a stage",
+};
+
+/**
  * Affiliate network site verification.
  *
  * AvantLink verifies site ownership by having the applicant place a JavaScript

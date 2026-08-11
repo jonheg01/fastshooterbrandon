@@ -1,4 +1,4 @@
-import { site, heroVideo } from "@/lib/site";
+import { site, heroVideo, heroCutout } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -25,6 +25,18 @@ export function Hero() {
       ) : null}
 
       <div className="hero__scrim" />
+
+      {heroCutout.src ? (
+        <img
+          className="hero__cutout"
+          src={heroCutout.src}
+          alt={heroCutout.alt}
+          width={398}
+          height={609}
+          fetchPriority="high"
+        />
+      ) : null}
+
       <div className="hero__cut" />
 
       <div className="hero__inner">
