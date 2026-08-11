@@ -1,4 +1,4 @@
-import { site, socials } from "@/lib/site";
+import { socials } from "@/lib/site";
 
 export function IdentityBar() {
   return (
@@ -15,9 +15,6 @@ export function IdentityBar() {
             {s.label} {s.handle}
           </a>
         ))}
-        <a className="idlink idlink--phone" href={site.phoneHref}>
-          {site.phone}
-        </a>
       </div>
     </nav>
   );

@@ -1,0 +1,64 @@
+# Builds the site image on GitHub's machines, never on the production server.
+#
+# Why this exists: on 2026-08-11 building this app on the Hetzner box that also
+# serves azhomesearchcentral.com, previewarizonahomes.com and realtyclientengine.com
+# saturated all 8 CPU cores and took every one of those sites offline. The server
+# should only ever download a finished image, never compile one.
+#
+# The box is ARM (Hetzner CAX31, Ampere), so this runs on an ARM runner and
+# produces a native linux/arm64 image with no emulation.
+
+name: build-image
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "README.md"
+  workflow_dispatch:
+
+concurrency:
+  group: build-image
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/arm64
+          push: true
+          tags: |
+            ghcr.io/jonheg01/fastshooterbrandon:latest
+            ghcr.io/jonheg01/fastshooterbrandon:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Make the package public so the server can pull it without a login
+        continue-on-error: true
+        run: |
+          curl -sS -X PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/user/packages/container/fastshooterbrandon \
+            -d '{"visibility":"public"}' || true

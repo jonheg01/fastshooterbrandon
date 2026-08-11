@@ -21,9 +21,6 @@ export function CategoryPage({
     <>
       <div className="pagehead">
         <div className="wrap">
-          <Link className="backlink" href="/">
-            Back to Fast Shooter Brandon
-          </Link>
           <p className="eyebrow">The gear</p>
           <h1 className="pagehead__title">{category.name}</h1>
         </div>

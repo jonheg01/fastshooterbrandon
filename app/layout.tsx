@@ -3,6 +3,7 @@ import { Big_Shoulders, Tektur, Outfit, Red_Hat_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
 import { site, verificationScript } from "@/lib/site";
+import { SiteNav } from "@/components/SiteNav";
 
 const display = Big_Shoulders({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default async function RootLayout({
         <a className="skip" href="#main">
           Skip to content
         </a>
+        <SiteNav />
         {children}
         {verificationScript.src ? (
           <script src={verificationScript.src} nonce={nonce} async />
