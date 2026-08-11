@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Big_Shoulders, Tektur, Outfit, Red_Hat_Mono } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
-import { site } from "@/lib/site";
+import { site, verificationScript } from "@/lib/site";
 
 const display = Big_Shoulders({
   subsets: ["latin"],
@@ -58,11 +59,13 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
+
   return (
     <html
       lang="en"
@@ -73,6 +76,9 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        {verificationScript.src ? (
+          <script src={verificationScript.src} nonce={nonce} async />
+        ) : null}
       </body>
     </html>
   );

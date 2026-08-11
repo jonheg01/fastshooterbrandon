@@ -23,7 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
         </span>
         <a
           className="btn"
-          href={product.outbound_url}
+          href={product.affiliate_url ?? product.outbound_url}
           target="_blank"
           rel="noopener noreferrer nofollow sponsored"
         >

@@ -33,6 +33,17 @@ Until then the hero renders the typographic fallback and requests no missing fil
 `is_sellable`, order schema, and a payment adapter are the planned path. Mainstream
 processors restrict firearm parts, so a high risk gateway decision comes first.
 
+## Affiliate links
+`Product.affiliate_url` overrides `outbound_url` on the card button when set.
+AvantLink issues a complete click URL per merchant, so the whole URL is stored
+rather than a code appended to the destination. Vortex, RISE Armament, and
+Double-Alpha Academy all run on AvantLink; one publisher account covers all three.
+
+Site ownership verification: set `verificationScript.src` in `lib/site.ts` to the
+snippet URL AvantLink emails, add their host to the `script-src` line in
+`middleware.ts`, deploy, confirm, then revert both. The tag renders with the page
+nonce so the strict CSP stays intact.
+
 ## Deploy
 Coolify on the Hetzner box, Dockerfile build, port 3000. Push to main, then trigger
 the deploy.

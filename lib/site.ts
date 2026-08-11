@@ -23,6 +23,29 @@ export const heroVideo: { src: string | null; poster: string | null } = {
   poster: null,
 };
 
+/**
+ * Affiliate network site verification.
+ *
+ * AvantLink verifies site ownership by having the applicant place a JavaScript
+ * snippet on the homepage, then calling it. Vortex, RISE Armament, and
+ * Double-Alpha Academy all run their programs on AvantLink, so one verification
+ * covers all three.
+ *
+ * To verify:
+ *   1. Paste the src URL AvantLink emails into `verificationScript.src`.
+ *   2. Add that host to the script-src line in middleware.ts (the commented
+ *      AVANTLINK_HOST entry is there for exactly this).
+ *   3. Deploy, confirm in the AvantLink dashboard.
+ *   4. Set src back to null and revert the middleware line. The allowance is
+ *      temporary on purpose.
+ *
+ * The tag is rendered with the page nonce, so it satisfies the strict CSP
+ * without opening the policy to inline script generally.
+ */
+export const verificationScript: { src: string | null } = {
+  src: null,
+};
+
 export type SocialLink = {
   label: string;
   handle: string;

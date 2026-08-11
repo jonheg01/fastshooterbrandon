@@ -15,6 +15,10 @@ export function middleware(request: NextRequest) {
     "default-src 'self'",
     // No 'strict-dynamic': it disables the host allowlist, which blocks Next's
     // own same-origin chunk files. 'self' plus the nonce covers both.
+    //
+    // AVANTLINK_HOST: while verifying the affiliate account, append the host
+    // AvantLink gives you, for example ` https://www.avantlink.com`, and set
+    // verificationScript.src in lib/site.ts. Remove both once verified.
     `script-src 'self' 'nonce-${nonce}'`,
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data:",

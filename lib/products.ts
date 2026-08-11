@@ -32,6 +32,12 @@ export type Product = {
   source_url: string;
   images: string[];
   affiliate_code: string | null;
+  /**
+   * Full affiliate tracking URL. When set it REPLACES outbound_url on the card
+   * button. AvantLink issues a complete click URL per merchant, so the whole URL
+   * is stored rather than a code appended to the destination.
+   */
+  affiliate_url?: string | null;
   inventory_count: number | null;
   is_sellable: false;
   verify?: string;
