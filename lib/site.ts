@@ -29,7 +29,7 @@ export const heroVideo: { src: string | null; poster: string | null } = {
  * near-black so there is no halo.
  */
 export const heroCutout: { src: string | null; alt: string } = {
-  src: "/brandon-hero.webp",
+  src: "/brandon-hero-v2.webp",
   alt: "Brandon Hegreness shooting a stage",
 };
 
