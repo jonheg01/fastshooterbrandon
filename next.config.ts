@@ -18,6 +18,13 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  async redirects() {
+    return [
+      // The Pistol category became Open 2011 on 2026-08-12. Keep every link,
+      // bookmark, and QR code that was printed against /pistol working.
+      { source: "/pistol", destination: "/open-2011", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

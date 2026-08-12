@@ -29,7 +29,7 @@ export const heroVideo: { src: string | null; poster: string | null } = {
  * near-black so there is no halo.
  */
 export const heroCutout: { src: string | null; alt: string } = {
-  src: "/brandon-hero-v2.webp",
+  src: "/brandon-hero.webp",
   alt: "Brandon Hegreness shooting a stage",
 };
 
@@ -116,11 +116,22 @@ export const coaching = {
     "In-person classes, online courses, and structured dry fire and live fire work. The site describes the path as novice to national champion in three years.",
 };
 
-export type CategoryKey = "rifle" | "pistol" | "pcc";
+/**
+ * Category keys.
+ *
+ * `open2011` is the former `pistol` category, renamed 2026-08-12 at Jon's
+ * instruction. The old /pistol URL permanently redirects to /open-2011 in
+ * next.config.ts so no existing link breaks.
+ *
+ * `co` is Carry Optics, added the same day. It is the Canik side of the safe.
+ */
+export type CategoryKey = "rifle" | "open2011" | "co" | "pcc";
 
 export type Category = {
   key: CategoryKey;
   name: string;
+  /** Short label for the sticky nav. Kept tight so four items fit at 390px. */
+  navLabel: string;
   slug: string;
   blurb: string;
 };
@@ -129,18 +140,28 @@ export const categories: Category[] = [
   {
     key: "rifle",
     name: "Rifle",
+    navLabel: "Rifle",
     slug: "/rifle",
     blurb: "Glass, mounts, trigger, brake, bipod.",
   },
   {
-    key: "pistol",
-    name: "Pistol",
-    slug: "/pistol",
+    key: "open2011",
+    name: "Open 2011",
+    navLabel: "Open 2011",
+    slug: "/open-2011",
     blurb: "The gun, the dot, the belt, the leather.",
+  },
+  {
+    key: "co",
+    name: "CO",
+    navLabel: "CO",
+    slug: "/co",
+    blurb: "Canik, brass, basepads, magwell.",
   },
   {
     key: "pcc",
     name: "PCC",
+    navLabel: "PCC",
     slug: "/pcc",
     blurb: "Basepads and capacity for the carbine.",
   },

@@ -1,21 +1,8 @@
-import type { Metadata } from "next";
-import { CategoryPage } from "@/components/CategoryPage";
+import { permanentRedirect } from "next/navigation";
 
-// Rendered per request so the nonce based CSP in middleware.ts applies.
-// The page data is a static import, so the render cost is negligible.
-export const dynamic = "force-dynamic";
-
-export const metadata: Metadata = {
-  title: "Pistol",
-  description:
-    "The pistol, the dot, the holster, the belt, the pouches, and the magazines Brandon Hegreness competes with.",
-};
-
+// The Pistol category became Open 2011 on 2026-08-12. next.config.ts already
+// serves a 308 for /pistol, so this route normally never renders. It stays as a
+// second line of defence for any client side navigation that reaches it.
 export default function PistolPage() {
-  return (
-    <CategoryPage
-      categoryKey="pistol"
-      intro="The gun, the dot, and everything on the belt. Rig details matter more than most people think, so the belt and pouch specs are here too."
-    />
-  );
+  permanentRedirect("/open-2011");
 }

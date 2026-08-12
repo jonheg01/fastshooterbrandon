@@ -29,7 +29,7 @@ export function SiteNav() {
                   href={c.slug}
                   aria-current={active ? "page" : undefined}
                 >
-                  {c.name}
+                  {c.navLabel}
                 </Link>
               </li>
             );

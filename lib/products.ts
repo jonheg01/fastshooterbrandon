@@ -96,7 +96,7 @@ export const products: Product[] = [
     slug: "vortex-defender-xl-2-moa",
     name: "Defender-XL Micro Red Dot, 2 MOA, Black",
     brand: "Vortex Optics",
-    category: ["rifle", "pistol"],
+    category: ["rifle", "open2011"],
     description:
       "The window is the whole point. Vortex builds the Defender-XL around an oversized sight window for peripheral vision and faster follow-up shots, and they list it as a competition optic. I run the 2 MOA dot in black, and it carries the same VIP unlimited lifetime warranty as the rest of their line.",
     specs: ["2 MOA dot", "Black", "Competition optic", "VIP lifetime warranty"],
@@ -238,12 +238,69 @@ export const products: Product[] = [
     is_sellable: false,
   },
 
-  /* --------------------------------------------------------------- PISTOL */
+  {
+    slug: "luth-ar-18-mark12-upper",
+    name: "18 inch MARK12 Complete Upper Barrel Receiver Assembly",
+    brand: "Luth-AR",
+    category: ["rifle"],
+    description:
+      "Eighteen inches of 416 stainless in 5.56, button broached, Teflon coated, 1-9 right hand twist, and not chrome lined. Luth-AR builds it on a 7075-T6 forged upper in hard coat black anodize with a Carpenter 158 bolt and an 8620 carrier under manganese phosphate, heat treated to Army spec. It ships assembled with the charging handle, forward assist, and ejection port cover, wearing a 15 inch vented Palm Handguard and an A2 flash hider on 1/2x28.",
+    specs: [
+      "18 in barrel",
+      "5.56",
+      "416 stainless",
+      "1-9 RH twist",
+      "1/2x28",
+      "M4 feed ramp",
+      "7075-T6 upper",
+      "Carpenter 158 bolt",
+      "15 in Palm Handguard",
+      "A2 flash hider",
+      "Made in America",
+    ],
+    price: "$459.95",
+    outbound_url:
+      "https://luth-ar.com/product/18-mark12-complete-upper-barrel-receiver-assembly/",
+    source_url:
+      "https://luth-ar.com/product/18-mark12-complete-upper-barrel-receiver-assembly/",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+  },
+  {
+    slug: "magpul-prs-lite-stock",
+    name: "PRS Lite Stock",
+    brand: "Magpul",
+    category: ["rifle"],
+    description:
+      "Ten positions of length of pull from 13.85 to 15.25 inches, and eight increments of comb height across 0.8 inches. 18.7 ounces for the stock by itself, about 22.5 with the receiver extension, and every adjustment is secured with a hex wrench instead of a friction knob. It fits mil-spec carbine, SR25, and A5 receiver extensions, and Magpul makes it in the USA.",
+    specs: [
+      "18.7 oz",
+      "LOP 13.85 to 15.25 in",
+      "10 LOP positions",
+      "0.8 in comb rise",
+      "Reversible QD cup",
+      "Mil-spec, SR25, A5 tubes",
+      "Made in the USA",
+    ],
+    price: "$129.95",
+    outbound_url: "https://magpul.com/prs-lite-stock.html",
+    source_url: "https://magpul.com/prs-lite-stock.html",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+    verify:
+      "Magpul lists it as not compatible with rifle and A1 receiver extensions, commercial-spec tubes, ASAP plates, or the Ruger SFAR. Color options are not published on the product page.",
+  },
+
+  /* ------------------------------------------------------------ OPEN 2011 */
   {
     slug: "sy-guns-competition-pistol",
     name: "Custom Competition Pistol",
     brand: "SY Guns",
-    category: ["pistol"],
+    category: ["open2011"],
     description:
       "SY Guns builds out of Henderson, Nevada, and they build to order: you pick the model, the grip, and the finish. Their order page lists the Open Gun at $8,000 and the Limited Optic Gun at $7,000, both optic ready. Orders start with a $2,500 deposit and the balance comes due at shipping.",
     specs: [
@@ -267,7 +324,7 @@ export const products: Product[] = [
     slug: "range-panda-apex-predator",
     name: "The A.P.E.X Predator Holster",
     brand: "Range Panda",
-    category: ["pistol"],
+    category: ["open2011"],
     description:
       "Race holster, made to order and cut to a specific grip rather than built universal. The supplied hanger fits a 1.5 inch belt, the medium thigh pad is included, and the body is ambidextrous. Range Panda intends it to run with their Barrel Support System, and the grip insert is a separate purchase.",
     specs: [
@@ -291,7 +348,7 @@ export const products: Product[] = [
     slug: "daa-idpa-racer-magazine-pouch",
     name: "IDPA Racer Magazine Pouch",
     brand: "Double-Alpha Academy",
-    category: ["pistol"],
+    category: ["open2011"],
     description:
       "Thumb wheel retention set to current IDPA rules, and the tilt adjusts in small increments so the grip sits where your hand goes. It slides onto IDPA legal leather belts from 1.5 to 2.25 inches with click-in spacers for the width. The inserts swap for 2011, CZ, Glock, and M&P magazines.",
     specs: [
@@ -318,7 +375,7 @@ export const products: Product[] = [
     slug: "daa-magnetic-magazine-pouch-combo",
     name: "Magnetic Magazine Pouch with Magnet Cover",
     brand: "Double-Alpha Academy",
-    category: ["pistol"],
+    category: ["open2011"],
     description:
       "The magnetic pouch and the magnet cover, bought as one bundle. DAA prices the pouch at $37.95 and the cover at $11.95 on their own, and $47.40 for the pair.",
     specs: ["Bundle of 2", "Pouch $37.95 alone", "Cover $11.95 alone"],
@@ -336,7 +393,7 @@ export const products: Product[] = [
     slug: "daa-ratchet-belt",
     name: "Ratchet Belt",
     brand: "Double-Alpha Academy",
-    category: ["pistol"],
+    category: ["open2011"],
     description:
       "The ratchet buckle lets me crank the belt down before a stage and back it off between them, with 1 to 10 cm of adjustment in the mechanism. Rigid outer belt at 39mm wide and 8mm thick, and the matched DAA inner belt comes with it, including a soft section that sits under the buckle. Sizes run 70 to 125 cm in black, blue, red, or silver.",
     specs: [
@@ -360,7 +417,7 @@ export const products: Product[] = [
     slug: "perfect-zero-premium-magazines",
     name: "Premium Magazines",
     brand: "Perfect Zero",
-    category: ["pistol"],
+    category: ["open2011"],
     description:
       "Perfect Zero builds these in 9mm and .40 S&W across 120, 126, 140, and 170mm lengths, most of them on an Alphalock basepad. Stainless tubes, with listed capacities from 10 rounds in the restricted 126mm up to 29 rounds in the 170mm 9mm. Their lineup prices from $94.99 to $104.99.",
     specs: [
@@ -379,6 +436,198 @@ export const products: Product[] = [
     is_sellable: false,
     verify:
       "Which exact length and capacity Brandon runs is not confirmed. Card links to the full lineup.",
+  },
+
+  /* ------------------------------------------------------------------- CO */
+  {
+    slug: "canik-sfx-rival",
+    name: "SFx RIVAL",
+    brand: "Canik",
+    category: ["co"],
+    description:
+      "Five inch barrel, 18 rounds, 29.5 ounces, 8.1 inches overall, with a fiber optic front and a click adjustable rear. Canik ships it as a kit rather than a bare gun: hard case, two magazines, loader, external magwell, holster, three optic interfaces, three backstraps, and three magazine release extensions. Flat face aluminum trigger, ported slide, ambidextrous slide release, reversible magazine releases.",
+    specs: [
+      "9mm Luger",
+      "5 in barrel",
+      "8.1 in overall",
+      "29.5 oz",
+      "18 rounds",
+      "Fiber optic front",
+      "Adjustable rear",
+      "3 optic plates",
+    ],
+    price: "$679.99 MSRP",
+    outbound_url:
+      "https://www.canik.com/products/sfx-rival?Color=Canik+Grey&Optic+Included=None&Magazine+Size=18+Round",
+    source_url: "https://www.canik.com/products/sfx-rival",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+    verify:
+      "Canik does not publish a trigger pull weight or a slide material on the product page. Neither is claimed here.",
+  },
+  {
+    slug: "canik-sfx-rival-s",
+    name: "SFx RIVAL-S",
+    brand: "Canik",
+    category: ["co"],
+    description:
+      "Same five inch barrel and 18 round magazine as the SFx Rival, built on a stainless steel frame at 42.72 ounces instead of polymer. Canik lists the steel frame as added weight for recoil management, in a nitride or chrome finish depending on the model. It comes in a water resistant travel case with two magazines, a loader, an external magwell, a holster, backstraps, and the optic plate system.",
+    specs: [
+      "9mm Luger",
+      "5 in barrel",
+      "8.09 in overall",
+      "42.72 oz",
+      "18 rounds",
+      "Stainless steel frame",
+      "Fiber optic front",
+      "Chrome or Darkside",
+    ],
+    price: "$949.99 MSRP",
+    outbound_url: "https://www.canik.com/products/sfx-rival-s?Color=Darkside&Optic=None",
+    source_url: "https://www.canik.com/products/sfx-rival-s",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+  },
+  {
+    slug: "w74-canik-rival-guide-rod",
+    name: "Canik Rival Guide Rod",
+    brand: "W74 Guide Rods",
+    category: ["co"],
+    description:
+      "W74 Guide Rods makes a guide rod for the Canik Rival. Their product page will not serve an automated read, so no material, weight, or price is claimed here until it is confirmed.",
+    specs: ["Canik Rival fitment"],
+    price: null,
+    outbound_url: "https://w74guiderods.com/product/canik-rival-guide-rod/",
+    source_url: "https://w74guiderods.com/product/canik-rival-guide-rod/",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+    verify:
+      "w74guiderods.com would not load for an automated read on 2026-08-12 (robots.txt connect timeout). Material, weight, price, and options are unconfirmed. Read the page by hand and fill this in.",
+  },
+  {
+    slug: "taylor-freelance-canik-death-grip-backstrap",
+    name: "Canik Mete / Rival / TTI Death Grip Backstrap, Brass",
+    brand: "Taylor Freelance",
+    category: ["co"],
+    description:
+      "Machined from H02 brass bar stock at 4.05 ounces, with the checkering cut into the piece rather than cast into it. Taylor Freelance says it lowers the center of gravity for better balance and calmer handling, and it carries built in mount points for factory and TF magwells. Small and medium grip size, shiny brass, and it does not fit the Rival-S.",
+    specs: [
+      "H02 brass",
+      "4.05 oz",
+      "Cut checkering",
+      "Mete / Rival / TTI",
+      "Does not fit Rival-S",
+      "Small / medium",
+    ],
+    price: "$69.99",
+    outbound_url:
+      "https://taylorfreelancestore.com/canik-mete-rival-tti-death-grip-backstrap-brass-shiny/",
+    source_url:
+      "https://taylorfreelancestore.com/canik-mete-rival-tti-death-grip-backstrap-brass-shiny/",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+  },
+  {
+    slug: "taylor-freelance-canik-140mm-plus-4",
+    name: "Canik 140mm +4 Extensions",
+    brand: "Taylor Freelance",
+    category: ["co"],
+    description:
+      "Four more rounds on a 140mm Canik magazine, in aluminum or brass, across roughly a dozen finishes including tungsten, CK gold, mango, and black. Aluminum basepads start at $29.99 and the Signature versions run to $37.99. Brass runs $39.99 to $47.99.",
+    specs: [
+      "+4 rounds",
+      "140mm",
+      "Aluminum or brass",
+      "Signature option",
+      "$29.99 to $47.99",
+    ],
+    price: "From $29.99",
+    outbound_url: "https://taylorfreelancestore.com/canik/mag-extensions/4-extensions/",
+    source_url: "https://taylorfreelancestore.com/canik/mag-extensions/4-extensions/",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+  },
+  {
+    slug: "taylor-freelance-canik-140mm-v2-plus-4",
+    name: "Canik 140mm v2.0 +4 Extensions",
+    brand: "Taylor Freelance",
+    category: ["co"],
+    description:
+      "The v2.0 version of the same +4 extension, built around a toolless basepad locking assembly that Taylor Freelance also sells as a $9.00 spare part. Aluminum starts at $44.99 and brass at $59.99.",
+    specs: [
+      "+4 rounds",
+      "140mm v2.0",
+      "Toolless locking assembly",
+      "Aluminum or brass",
+      "Spare parts sold separately",
+    ],
+    price: "From $44.99",
+    outbound_url:
+      "https://taylorfreelancestore.com/canik/mag-extensions/140mm-v2-0-4-extensions/",
+    source_url:
+      "https://taylorfreelancestore.com/canik/mag-extensions/140mm-v2-0-4-extensions/",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+  },
+  {
+    slug: "taylor-freelance-canik-170mm-plus-9",
+    name: "Canik 170mm +9 Signature Extensions",
+    brand: "Taylor Freelance",
+    category: ["co"],
+    description:
+      "Taylor Freelance puts it in one line on their own page: extend your 18 or 20 round Canik TP9 SF magazine to 27 plus 1. The Signature line adds a built in rip strip, extra weight relief cuts, and a non-reflective matte finish. Aluminum with spring starts at $54.99, brass runs $69.99 to $74.99.",
+    specs: [
+      "+9 rounds",
+      "170mm",
+      "27 plus 1",
+      "Rip strip",
+      "Matte finish",
+      "Aluminum or brass",
+    ],
+    price: "From $54.99",
+    outbound_url:
+      "https://taylorfreelancestore.com/canik/mag-extensions/170mm-9-signature/",
+    source_url: "https://taylorfreelancestore.com/canik/mag-extensions/170mm-9-signature/",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+  },
+  {
+    slug: "taylor-freelance-canik-magwell",
+    name: "Canik Mete / Rival / TTI Magwell",
+    brand: "Taylor Freelance",
+    category: ["co"],
+    description:
+      "This expands on the magwell already cut into the full size Mete frame, and Taylor Freelance quotes a customer describing the result as loading into a vacuum cleaner. It works with their +0, +4, and +9 extensions. Aluminum is $49.99 in eight finishes, brass is $64.99 to $69.99.",
+    specs: [
+      "Mete / Rival / TTI",
+      "Works with +0, +4, +9",
+      "Aluminum $49.99",
+      "Brass from $64.99",
+      "8 aluminum finishes",
+    ],
+    price: "From $49.99",
+    outbound_url: "https://taylorfreelancestore.com/canik/magwells/mete-rival/",
+    source_url: "https://taylorfreelancestore.com/canik/magwells/mete-rival/",
+    images: [],
+    affiliate_code: null,
+    inventory_count: null,
+    is_sellable: false,
+    verify:
+      "Taylor Freelance does not print a material or a weight for the magwell itself on the category page.",
   },
 
   /* ------------------------------------------------------------------ PCC */
