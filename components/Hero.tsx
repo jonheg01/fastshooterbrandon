@@ -31,8 +31,8 @@ export function Hero() {
           className="hero__cutout"
           src={heroCutout.src}
           alt={heroCutout.alt}
-          width={398}
-          height={609}
+          width={766}
+          height={934}
           fetchPriority="high"
         />
       ) : null}
